@@ -1,0 +1,25 @@
+{
+  "name": "highlanderbot",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulpfeister/highlanderbot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paulpfeister/highlanderbot/issues"
+  },
+  "homepage": "https://github.com/paulpfeister/highlanderbot#readme",
+  "dependencies": {
+    "discord.js": "^12.1.1",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {}
+}
