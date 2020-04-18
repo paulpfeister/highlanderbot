@@ -11,14 +11,16 @@
     "url": "git+https://github.com/paulpfeister/highlanderbot.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Paul Pfeister",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/paulpfeister/highlanderbot/issues"
   },
   "homepage": "https://github.com/paulpfeister/highlanderbot#readme",
   "dependencies": {
-    "discord.js": "^12.1.1"
+    "discord.js": "^12.1.1",
+    "keyv": "^4.0.0",
+    "sequelize": "^5.21.6"
   },
   "devDependencies": {}
 }
