@@ -1,0 +1,32 @@
+name: Deploy to Digital Ocean
+
+on:
+  release:
+    types: [created]
+    branches: [master]
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: self-hosted
+
+    steps:
+    - name: Deploy new STABLE release
+      if: github.ref == 'ref/heads/master'
+      run: |
+        cd ~/highlanderbot-release
+        systemctl stop highlanderbot-release
+        git fetch
+        git checkout master
+        git merge origin/master
+        systemctl start highlanderbot-release
+        
+    - name: Deploy new DEVEL release
+      if: github.ref == 'ref/heads/devel'
+      run: |
+        cd ~/highlanderbot-devel
+        systemctl stop highlanderbot-devel
+        git fetch
+        git checkout devel
+        git merge origin/devel
+        systemctl start highlanderbot-devel
