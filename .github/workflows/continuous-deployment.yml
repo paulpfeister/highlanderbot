@@ -12,7 +12,6 @@ jobs:
 
     steps:
     - name: Deploy new STABLE release
-      #if: github.ref == 'ref/heads/master'
       run: |
         echo "deploying from master branch"
         cd ~/highlanderbot-release
