@@ -15,17 +15,17 @@ jobs:
       run: |
         echo "deploying from master branch"
         cd ~/highlanderbot-release
-        systemctl stop highlanderbot-release
+        systemctl stop highlanderbot-release.service
         git fetch
         git checkout master
         git merge origin/master
-        systemctl start highlanderbot-release
+        systemctl start highlanderbot-release.service
         echo "done"
         echo "deploying from devel branch"
         cd ~/highlanderbot-devel
-        systemctl stop highlanderbot-devel
+        systemctl stop highlanderbot-devel.service
         git fetch
         git checkout devel
         git merge origin/devel
-        systemctl start highlanderbot-devel
+        systemctl start highlanderbot-devel.service
         echo "done"
